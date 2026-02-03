@@ -1,0 +1,36 @@
+{
+  "name": "pr-rnnoise",
+  "description": "To enhance the active noise reduction capability for pr-audio-stream.",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "private": false,
+  "author": "Breathe",
+  "keywords": [
+    "pr-rnnoise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Breathe97/pr-rnnoise"
+  },
+  "dependencies": {}
+}
