@@ -3,17 +3,18 @@ import rnnoiseWasmUrl from '../public/rnnoise/rnnoise.wasm?url'
 
 export class RnnoiseWorklet {
   // 音频上下文实例
-  audioContext = new AudioContext()
+  audioContext: AudioContext
 
   rnnoiseWorkletNode?: AudioWorkletNode
 
   rnnoiseWasmBuffer?: ArrayBuffer
 
-  constructor() {}
-
-  createRnnoiseWorkletNode = async (audioContext: AudioContext) => {
-    this.destroy()
+  constructor(audioContext: AudioContext) {
     this.audioContext = audioContext
+  }
+
+  createRnnoiseWorkletNode = async () => {
+    this.destroy()
 
     await this.audioContext.audioWorklet.addModule(rnnoiseWorkletProcessorUrl)
     this.rnnoiseWorkletNode = new AudioWorkletNode(this.audioContext, 'rnnoise-worklet-processor')

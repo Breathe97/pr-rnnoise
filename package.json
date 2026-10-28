@@ -1,7 +1,7 @@
 {
   "name": "pr-rnnoise",
   "description": "To enhance the active noise reduction capability for pr-audio-stream.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "files": [
     "dist"
@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
+    "vite": "^8.3.5",
+    "vite-plugin-dts": "^5.1.2"
   },
   "private": false,
   "author": "Breathe",
